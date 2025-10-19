@@ -8,9 +8,9 @@ export const Navbar = () => {
         <img className="w-full h-full object-contain" src={logo} alt="logo" />
       </div>
       <h1 className="text-indigo-800 text-3xl font-extrabold tracking-tight">
-        NoteIt
+        NOTE ALL
       </h1>
-      <div className="ml-auto text-sm text-gray-500">Quick notes · neat & bright</div>
+      <div className="ml-auto text-sm text-gray-500">Daily notes.Never Forget</div>
     </header>
   );
 };
