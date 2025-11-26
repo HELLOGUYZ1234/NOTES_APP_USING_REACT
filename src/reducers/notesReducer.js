@@ -135,13 +135,20 @@ export const notesReducer = (state, { type, payload }) => {
         )
       };
     }
-    case "TOGGLE_IMPORTANT":
+   case "TOGGLE_IMPORTANT":
   return {
     ...state,
     notes: state.notes.map((note) =>
       note.id === payload.id ? { ...note, isImportant: !note.isImportant } : note
     ),
+    archive: state.archive.map((note) =>
+      note.id === payload.id ? { ...note, isImportant: !note.isImportant } : note
+    ),
+    bin: state.bin.map((note) =>
+      note.id === payload.id ? { ...note, isImportant: !note.isImportant } : note
+    ),
   };
+
 
 
     default:
