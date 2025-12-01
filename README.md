@@ -148,6 +148,11 @@ Run tests:
 npm test
 
 
+Challenges faced during development:
+One of the most challenging problems I solved recently involved fixing a broken state-management flow in a React application where data kept disappearing after page refresh. The issue was tricky because the bug wasn't in one single component; it was conceptual, rooted in how the global context and reducer were designed. I had to trace the flow of actions across multiple pages, like Home, Archive, and Bin, just to identify where the state was getting lost. After pinpointing the issue, I redesigned the logic so that the reducer handled important actions consistently across all lists. LocalStorage was integrated with controlled initialization and automatic syncing, ensuring the whole app persisted data reliably. The change required careful updates to avoid infinite loops, performance issues, or mismatched states. In the end, the app turned fully stable, with all the notes maintaining their state even after refresh or navigation.
+
+
+
 Test coverage includes:
 
 Component rendering
@@ -157,6 +162,9 @@ Note creation and interactions
 Reducer state transitions
 
 Navigation behavior
+
+
+
 
 🛠 Troubleshooting
 Issue	Possible Fix
